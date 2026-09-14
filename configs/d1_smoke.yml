@@ -1,0 +1,23 @@
+run:
+  run_id: RUN-20260913-TLC-SMOKE-001
+  tier: smoke
+  purpose: validate acquisition, provenance, schema inspection, and row accounting
+  supports_portfolio_claims: false
+
+tlc:
+  dataset_id: TLC
+  months:
+    - "2022-01"
+
+noaa:
+  dataset_id: NOAA-ISD
+  years:
+    - 2022
+  station_selection_status: pending
+
+validation:
+  fail_on_download_error: true
+  fail_on_hash_error: true
+  record_row_count: true
+  record_temporal_bounds: true
+  quarantine_invalid_rows: true

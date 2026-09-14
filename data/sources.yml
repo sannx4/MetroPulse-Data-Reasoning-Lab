@@ -1,0 +1,36 @@
+version: 1
+
+datasets:
+  TLC:
+    name: NYC TLC Yellow Taxi Trip Records
+    publisher: NYC Taxi and Limousine Commission
+    authoritative_page: https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+    format: parquet
+    snapshot:
+      start_month: "2022-01"
+      end_month: "2025-12"
+    acquisition:
+      immutable_raw: true
+      record_sha256: true
+      record_bytes: true
+      record_rows: true
+      record_min_max_event_time: true
+    status: registered
+
+  NOAA-ISD:
+    name: NOAA Global Hourly Integrated Surface Database
+    publisher: NOAA/NCEI
+    authoritative_page: https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database
+    snapshot:
+      start_year: 2022
+      end_year: 2025
+      geography: NYC-area stations
+    acquisition:
+      immutable_raw: true
+      record_station_id: true
+      record_sha256: true
+      record_bytes: true
+      record_rows: true
+      preserve_quality_flags: true
+      silent_imputation_allowed: false
+    status: registered
