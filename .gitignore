@@ -1,0 +1,21 @@
+# Virtual environments / caches
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.pyc
+.DS_Store
+
+# Environment / secrets
+.env
+.env.*
+
+# Raw and generated data
+data/raw/
+data/quarantine/
+data/curated/
+
+# Generated reports
+reports/runs/*
+!reports/runs/.gitkeep
